@@ -2,6 +2,10 @@
 
 A scalable full-stack web application for audio processing with DSP filters, signal visualization, and asynchronous task processing.
 
+## Demo
+
+Watch the project demo: https://youtu.be/tujRxVQT0xE
+
 ## 🏗️ Architecture
 
 ```
@@ -66,11 +70,11 @@ For detailed instructions: **[RUN.md](RUN.md)**
 ## 📝 Features
 
 ### Phase 1 (MVP)
-- [ ] Audio upload & storage
-- [ ] FIR filter implementation
-- [ ] Basic visualization
-- [ ] Async processing with Celery
-- [ ] Download processed audio
+- [x] Audio upload & storage
+- [x] FIR filter implementation
+- [x] Basic visualization
+- [x] Async processing with Celery
+- [x] Download processed audio
 
 ### Phase 2
 - [ ] IIR filters
