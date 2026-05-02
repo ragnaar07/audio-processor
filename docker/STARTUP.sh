@@ -1,0 +1,91 @@
+#!/bin/bash
+
+# Display color codes
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${GREEN}✅ DOCKER FILES & SETUP COMPLETE!${NC}"
+echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo ""
+
+echo -e "${YELLOW}📁 Docker Files Created:${NC}"
+echo "  ✓ docker/Dockerfile.backend     - FastAPI container"
+echo "  ✓ docker/Dockerfile.frontend    - Next.js container"
+echo "  ✓ docker/Dockerfile.celery      - Celery worker container"
+echo "  ✓ docker/docker-compose.prod.yml - Full stack orchestration"
+echo "  ✓ docker/start-dev.sh            - Start dev infrastructure"
+echo "  ✓ docker/start-prod.sh           - Start full stack"
+echo ""
+
+echo -e "${YELLOW}📝 Documentation Created:${NC}"
+echo "  ✓ RUN.md          - Complete running guide (⭐ START HERE!)"
+echo "  ✓ QUICK_RUN.md    - Quick reference commands"
+echo ""
+
+echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${GREEN}🚀 HOW TO RUN NOW:${NC}"
+echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo ""
+
+echo -e "${YELLOW}Option 1️⃣ : Full Docker Stack (Easiest)${NC}"
+echo "Run this ONE command:"
+echo ""
+echo -e "${GREEN}  cd /Users/aryannn/Desktop/audio-processor${NC}"
+echo -e "${GREEN}  chmod +x docker/start-prod.sh${NC}"
+echo -e "${GREEN}  ./docker/start-prod.sh${NC}"
+echo ""
+echo "Then open: http://localhost:3000"
+echo ""
+echo ""
+
+echo -e "${YELLOW}Option 2️⃣ : Development Mode with Hot Reload${NC}"
+echo "Run in 4 separate terminals:"
+echo ""
+echo -e "${GREEN}Terminal 1:${NC}"
+echo "  cd /Users/aryannn/Desktop/audio-processor"
+echo "  chmod +x docker/start-dev.sh && ./docker/start-dev.sh"
+echo ""
+echo -e "${GREEN}Terminal 2 (Backend):${NC}"
+echo "  cd /Users/aryannn/Desktop/audio-processor/backend"
+echo "  python3 -m venv venv && source venv/bin/activate"
+echo "  pip install -r requirements.txt"
+echo "  python -m uvicorn main:app --reload"
+echo ""
+echo -e "${GREEN}Terminal 3 (Frontend):${NC}"
+echo "  cd /Users/aryannn/Desktop/audio-processor/frontend"
+echo "  npm install && npm run dev"
+echo ""
+echo -e "${GREEN}Terminal 4 (Celery Worker - optional):${NC}"
+echo "  cd /Users/aryannn/Desktop/audio-processor/backend"
+echo "  source venv/bin/activate"
+echo "  celery -A app.tasks.processing worker --loglevel=info"
+echo ""
+echo ""
+
+echo -e "${YELLOW}📍 Access After Starting:${NC}"
+echo "  - Frontend:      http://localhost:3000"
+echo "  - API:           http://localhost:8000"
+echo "  - API Docs:      http://localhost:8000/docs"
+echo "  - MinIO Console: http://localhost:9001"
+echo ""
+
+echo -e "${YELLOW}📚 Documentation:${NC}"
+echo "  - Quick Reference: QUICK_RUN.md"
+echo "  - Complete Guide:  RUN.md ⭐ Read this first!"
+echo "  - Setup:           docs/SETUP.md"
+echo "  - Architecture:    docs/ARCHITECTURE.md"
+echo "  - API Reference:   docs/API.md"
+echo ""
+
+echo -e "${YELLOW}🛠️ Useful Commands:${NC}"
+echo "  Stop everything:  docker-compose down"
+echo "  View logs:        docker-compose logs -f [service]"
+echo "  Restart service:  docker-compose restart [service]"
+echo ""
+
+echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${GREEN}Ready to go! Pick an option above and get started! 🎉${NC}"
+echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
